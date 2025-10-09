@@ -1,0 +1,149 @@
+:root {
+  --default-submit-button: hsl(7, 88%, 67%);
+  --neutral-gray-300: hsl(252, 6%, 83%);
+  --neutral-gray-500: hsl(245, 15%, 58%);
+  --neutral-gray-100: hsla(245, 15%, 58%, 15%);
+  --neutral-gray-350: hsla(252, 6%, 83%, 15%);
+}
+::file-selector-button {
+  display: none;
+}
+::placeholder {
+  color: var(--neutral-gray-300);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#upload-avatar {
+  display: none;
+}
+
+#upload-avatar-label {
+  display: block;
+  border: 2px dashed var(--neutral-gray-500);
+  border-radius: 15px;
+  height: 125px;
+  width: 90%;
+  background-image: linear-gradient(var(--neutral-gray-100));
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+
+}
+.form > label {
+  align-self: flex-start; /* override the center alignment */
+  margin-left: 5%;
+ 
+}
+
+.form > :not(label){
+     width: 90%;
+     
+
+}
+
+
+.avatar-upload-container {
+  min-width: 375px;
+
+}
+
+.avatar-upload-container .avatar-upload-icon {
+  background-image: linear-gradient(var(--neutral-gray-350));
+  border: 1px solid var(--neutral-gray-100);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
+}
+.upload-avatar-label p {
+  color: var(--neutral-gray-300);
+  font-size: 1.1rem;
+}
+
+.avatar-upload-favicon {
+  transform: translateY(3px);
+  margin-right: 10px;
+}
+.avatar-upload-fav-subtext {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: var(--neutral-gray-300);
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.frosted-input {
+  background-color: var(--neutral-gray-350);
+  color: var(--neutral-gray-300);
+  border-radius: 10px;
+  border: 1px solid var(--neutral-gray-500);
+  padding: 20px;
+ 
+
+}
+.generate-ticket-btn {
+  background-color: var(--default-submit-button);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 45px;
+  font-size: 1.1rem;
+ 
+}
+
+.logo {
+  text-align: center;
+}
+.logo img {
+  height: 100px;
+  width: 175px;
+}
+
+.content-label {
+  font-size: 20px;
+  margin: 15px 15px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  background-image: url("./assets/images/background-mobile.png");
+  color: white;
+  font-family: Inconsolata;
+}
+
+header {
+  text-align: center;
+  margin-right: 20px;
+}
+header h1 {
+  font-size: 1.8rem;
+}
+header p {
+  margin: 20px 10px;
+  color: hsl(252, 6%, 83%);
+  font-size: 1.2rem;
+}
+
+input[type="file"] {
+  color: rgba(0, 0, 0, 0);
+}
