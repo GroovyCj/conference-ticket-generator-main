@@ -28,15 +28,18 @@
 
   <div class="container">
   <!-- Form starts -->
-   <form class="form" action="/submit_form" method="post">
+   <form  id="form" class="form" action="/submit_form" method="post">
 
   
   <div class="avatar-upload-container">
   <p class="content-label" >Upload Avatar</p>
-  <label for="upload-avatar" class="upload-avatar-label" id="upload-avatar-label"><img class="avatar-upload-icon"  src="./assets/images/icon-upload.svg" /> <p>Drag and drop or click to upload</p></label>
+  <label tabindex="0" for="upload-avatar" class="upload-avatar-label" id="upload-avatar-label"><img class="avatar-upload-icon" id="file-preview"  src="./assets/images/icon-upload.svg" /> <p id="upload-avatar-subtext">Drag and drop or click to upload</p></label>
 
-  <input type="file" id="upload-avatar" class="upload-avatar" name="ticket-picture">
-  <p class="avatar-upload-fav-subtext"> <img class="avatar-upload-favicon" src="./assets/images/icon-info.svg" />Upload your photo (JPEG or PNG, max size: 500KB).</p>
+
+  <input type="file" accept=".jpg, .jpeg, .png"  id="upload-avatar" class="upload-avatar" name="upload-avatar">
+  <p class="avatar-upload-fav-subtext" id="display-message"> <svg  class="avatar-upload-favicon" id="avatar-upload-favicon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="none" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg><span id="avatar-upload-display-text">Upload your photo (JPEG or PNG, max size: 500KB).</span></p>
+
+
   
   </div>
   
@@ -46,11 +49,14 @@
   
  
     <label class="content-label" for="full-name">Full Name</label>
-    <input id="full-name" class="frosted-input" type="text" required >
+    <input id="full-name" class="frosted-input" type="text" >
+    <div class="input-error-state fullname-input-error"></div>
     <label class="content-label" for="email"> Email Address</label>
-    <input id="email" class="frosted-input" type="email" required placeholder="example@email.com">
+    <input id="email" class="frosted-input" type="text" placeholder="example@email.com">
+    <div class="input-error-state email-input-error"></div>
     <label class="content-label" for="github-username">GitHub Username</label>
-    <input type="text" class="frosted-input" placeholder="@yourusername" >
+    <input type="text" id="github-username" class="frosted-input" placeholder="@yourusername" >
+    <div class="input-error-state github-input-error"></div>
     <button type="submit" id="generate-ticket-btn" class="generate-ticket-btn">Generate My Ticket</button>
  
 
@@ -82,6 +88,6 @@
     Coded by <a href="#">Cory Hairston</a>.
   </div>
 
-
+<script type="module" src="scripts.js"></script>
 </body>
 </html>

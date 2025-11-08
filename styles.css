@@ -4,6 +4,9 @@
   --neutral-gray-500: hsl(245, 15%, 58%);
   --neutral-gray-100: hsla(245, 15%, 58%, 15%);
   --neutral-gray-350: hsla(252, 6%, 83%, 15%);
+  --neutral-gray-700: hsl(245, 19%, 35%);
+  --neutral-gray-900: hsl(248, 70%, 10%);
+  --warm-red: #ff7276;
 }
 ::file-selector-button {
   display: none;
@@ -31,6 +34,9 @@
   background-image: linear-gradient(var(--neutral-gray-100));
   margin: auto;
   text-align: center;
+  backdrop-filter: blur(4px); /* the magic */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
+
 }
 
 .container {
@@ -40,44 +46,53 @@
 }
 .form {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-
+  flex-direction: column;
+  align-items: center;
 }
 .form > label {
   align-self: flex-start; /* override the center alignment */
   margin-left: 5%;
- 
 }
 
-.form > :not(label){
-     width: 90%;
-     
-
+.form > :not(label) {
+  width: 90%;
 }
-
 
 .avatar-upload-container {
   min-width: 375px;
-
 }
 
 .avatar-upload-container .avatar-upload-icon {
   background-image: linear-gradient(var(--neutral-gray-350));
   border: 1px solid var(--neutral-gray-100);
   border-radius: 10px;
-  padding: 10px;
+
   margin: 20px 10px 10px 10px;
+}
+
+.avatar-upload-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
 }
 .upload-avatar-label p {
   color: var(--neutral-gray-300);
   font-size: 1.1rem;
 }
+.upload-avatar-label:hover {
+  background-color: var(--neutral-gray-350);
+  cursor: pointer;
+}
 
 .avatar-upload-favicon {
   transform: translateY(3px);
   margin-right: 10px;
+  color: #d1d0d5;
 }
+.avatar-upload-favicon.error path {
+  stroke: var(--warm-red);
+}
+
 .avatar-upload-fav-subtext {
   display: inline-block;
   font-size: 0.7rem;
@@ -86,14 +101,35 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.frosted-input {
+
+.avatar-buttons button {
   background-color: var(--neutral-gray-350);
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 0.6rem;
+}
+
+.frosted-input {
+  background-color: var(--neutral-gray-100);
   color: var(--neutral-gray-300);
   border-radius: 10px;
   border: 1px solid var(--neutral-gray-500);
   padding: 20px;
- 
-
+  backdrop-filter: blur(8px); /* the magic */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+}
+.frosted-input.error {
+  border-color: var(--warm-red);
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+.input-error-state {
+  min-height: 1rem;
+  font-size: 0.7rem;
+  color: var(--warm-red);
+  margin-top: 4px;
 }
 .generate-ticket-btn {
   background-color: var(--default-submit-button);
@@ -101,7 +137,6 @@
   border-radius: 10px;
   margin-top: 45px;
   font-size: 1.1rem;
- 
 }
 
 .logo {
@@ -126,9 +161,19 @@
   color: hsl(228, 45%, 44%);
 }
 body {
-  background-image: url("./assets/images/background-mobile.png");
+  background-color: #0b0220; /* fallback solid base */
+  background-image: 
+    /* url("./assets/images/background-mobile.png"), */
+    url(".assets/images/pattern-lines.svg"),   /* vertical lines / circles */
+    url("assets/images/pattern-lines.svg"),    /* swoosh curves */
+    linear-gradient(180deg, #1a0645 0%, #090018 100%); /* gradient base */
+  /* background-repeat: no-repeat, no-repeat, no-repeat; */
+  background-position: center, bottom left, center;
+  background-size: cover, contain, cover;
+  background-blend-mode: overlay, normal, normal;
   color: white;
-  font-family: Inconsolata;
+  font-family: 'Inconsolata', monospace;
+  min-height: 100vh;
 }
 
 header {
@@ -146,4 +191,15 @@ header p {
 
 input[type="file"] {
   color: rgba(0, 0, 0, 0);
+}
+
+input:focus,
+label:focus {
+  outline: 2px solid var(--neutral-gray-500);
+  outline-offset: 1px;
+}
+
+input:hover {
+  background-color: var(--neutral-gray-350);
+  cursor: pointer;
 }
