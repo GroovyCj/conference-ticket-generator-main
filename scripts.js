@@ -45,8 +45,8 @@ const showAvatarButtons = () => {
   });
 
   changeBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // block label click
-    fileInput.click(); // manually open the file dialog
+    e.stopPropagation(); 
+    fileInput.click(); 
   });
 
   removeBtn.addEventListener("click", (e) => {
@@ -95,7 +95,7 @@ const previewPhoto = () => {
 
 mainForm.addEventListener("submit", (e) => {
  formSubmitValidationArray.forEach((input) => {
-    const errorDiv = input.nextElementSibling; // grab the paired error div
+    const errorDiv = input.nextElementSibling; 
     let errorMessage = "";
 
     if (input.value.trim() === "") {
@@ -104,7 +104,7 @@ mainForm.addEventListener("submit", (e) => {
       errorMessage = "Please enter a valid email address.";
     }
 
-    // Add message based on input ID (or you could use data-* attributes)
+
     if (input.id === "full-name" && errorMessage) {
       errorMessage = "Please enter your full name.";
     } else if (input.id === "github-username" && errorMessage) {

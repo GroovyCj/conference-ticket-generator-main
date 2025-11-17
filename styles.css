@@ -34,9 +34,8 @@
   background-image: linear-gradient(var(--neutral-gray-100));
   margin: auto;
   text-align: center;
-  backdrop-filter: blur(4px); /* the magic */
+  backdrop-filter: blur(4px); 
   -webkit-backdrop-filter: blur(4px); /* Safari support */
-
 }
 
 .container {
@@ -50,7 +49,7 @@
   align-items: center;
 }
 .form > label {
-  align-self: flex-start; /* override the center alignment */
+  align-self: flex-start; 
   margin-left: 5%;
 }
 
@@ -117,9 +116,9 @@
   color: var(--neutral-gray-300);
   border-radius: 10px;
   border: 1px solid var(--neutral-gray-500);
-  padding: 20px;
-  backdrop-filter: blur(8px); /* the magic */
-  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  padding: 15px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .frosted-input.error {
   border-color: var(--warm-red);
@@ -133,9 +132,9 @@
 }
 .generate-ticket-btn {
   background-color: var(--default-submit-button);
-  padding: 20px;
+  padding: 15px;
+  margin: 10px;
   border-radius: 10px;
-  margin-top: 45px;
   font-size: 1.1rem;
 }
 
@@ -160,22 +159,29 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
 body {
-  background-color: #0b0220; /* fallback solid base */
-  background-image: 
-    /* url("./assets/images/background-mobile.png"), */
-    url(".assets/images/pattern-lines.svg"),   /* vertical lines / circles */
-    url("assets/images/pattern-lines.svg"),    /* swoosh curves */
-    linear-gradient(180deg, #1a0645 0%, #090018 100%); /* gradient base */
-  /* background-repeat: no-repeat, no-repeat, no-repeat; */
-  background-position: center, bottom left, center;
-  background-size: cover, contain, cover;
-  background-blend-mode: overlay, normal, normal;
+  background-color: #0b0220;
+
+  background-image: url("assets/images/pattern-lines.svg"),
+    url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("assets/images/pattern-circle.svg"),
+    url("assets/images/pattern-circle.svg"),
+    url("assets/images/pattern-squiggly-line-top.svg"),
+    url("assets/images/background-mobile.png");
+  background-size: 250% auto, 70% auto, 30% auto, 30% auto, cover, cover;
+
+  background-blend-mode: normal, normal, normal, normal, normal, lighten;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat;
+
+  background-position: center top, left bottom, -20px -25px, right, right 30px,
+    center top;
+
   color: white;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   min-height: 100vh;
 }
-
 header {
   text-align: center;
   margin-right: 20px;
@@ -202,4 +208,26 @@ label:focus {
 input:hover {
   background-color: var(--neutral-gray-350);
   cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("assets/images/pattern-lines.svg"),
+      url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+      url("assets/images/pattern-circle.svg"),
+      url("assets/images/pattern-circle.svg"),
+      url("assets/images/pattern-squiggly-line-top.svg"),
+      url("assets/images/background-desktop.png");
+
+    background-size: 80% auto, 60% auto, 15% 25%, 15% 25%, 30% 15%, cover;
+    background-repeat: repeat-x, no-repeat, no-repeat, no-repeat, no-repeat,
+      no-repeat;
+
+    background-position: center top, left bottom, 30px -75px, 64%, 110% 50px,
+      center top;
+  }
+
+  .frosted-input {
+    padding: 15px 100px;
+  }
 }
