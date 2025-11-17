@@ -169,13 +169,13 @@ body {
     url("assets/images/pattern-circle.svg"),
     url("assets/images/pattern-squiggly-line-top.svg"),
     url("assets/images/background-mobile.png");
-  background-size: 250% auto, 70% auto, 30% auto, 30% auto, cover, cover;
+  background-size: 250% auto, 70% auto, 30% auto, 30% auto, 30% auto, cover;
 
   background-blend-mode: normal, normal, normal, normal, normal, lighten;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
     no-repeat;
 
-  background-position: center top, left bottom, -20px -25px, right, right 30px,
+  background-position: center top, left bottom, -20px -25px, 110% 60%, right 30px,
     center top;
 
   color: white;
