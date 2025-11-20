@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/GroovyCj/conference-ticket-generator-main)
-- Live Site URL: [Add live site URL here](https://groovycj.github.io/conference-ticket-generator-main/)
+- Solution URL: [Solution](https://github.com/GroovyCj/conference-ticket-generator-main)
+- Live Site URL: [Live](https://groovycj.github.io/conference-ticket-generator-main/)
 
 ## My process
 
