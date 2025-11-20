@@ -34,22 +34,155 @@
   background-image: linear-gradient(var(--neutral-gray-100));
   margin: auto;
   text-align: center;
-  backdrop-filter: blur(4px); 
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px); /* Safari support */
+}
+#ticket-logo {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+
+  height: 50px;
+  width: 200px;
 }
 
 .container {
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
+
 }
+
+.ticket-container {
+  min-width: 375px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  gap: 40px;
+  overflow-wrap: break-word;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.ticket-container .congrats-banner, .ticket-container .congrats-banner-subtext {
+  max-width: 500px;
+}
+.ticket-img-container {
+  position: relative;
+  margin-top: 30px;
+}
+
+.ticket-container .conference-ticket {
+  width: 350px;
+}
+.ticket-avatar{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-image: linear-gradient(var(--neutral-gray-350));
+  border-radius: 15%;
+  bottom: 12%;
+  left: 5%;
+}
+.ticket-github-username {
+  position: absolute;
+  font-size: .8rem;
+  left: 22%;
+  bottom: 15%;
+  color: var(--neutral-gray-300)
+  
+}
+.ticket-github-favicon{
+    transform: translateY(3px);
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+
+
+
+}
+#ticket-banner-name {
+   background-image: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+   color: transparent;
+     background-clip: text;
+}
+
+.congrats-banner-subtext {
+  font-size: 1.4rem;
+
+
+}
+#ticket-email {
+  color: hsl(7, 86%, 67%);
+}
+
+#ticket-number {
+  position: absolute;
+   transform: rotate(90deg);
+   color: var(--neutral-gray-350);
+   top: 50%;
+   bottom: 50%;
+   right: 0%;
+   
+}
+
+.back-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: var(--neutral-gray-350);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-btn:hover {
+  background: var(--neutral-gray-300);
+}
+
+.ticket-name{
+  position: absolute;
+  font-size: 1.1rem;
+  left: 22%;
+  bottom: 28%;
+}
+.conference-ticket-date {
+  position: absolute;
+  font-size: .9rem;
+  color: var(--neutral-gray-300);
+  left: 18%;
+  top: 28%;
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-out-reverse {
+  opacity: 0 !important;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .form > label {
-  align-self: flex-start; 
+  align-self: flex-start;
   margin-left: 5%;
 }
 
@@ -175,8 +308,8 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
     no-repeat;
 
-  background-position: center top, left bottom, -20px -25px, 110% 60%, right 30px,
-    center top;
+  background-position: center top, left bottom, -20px -25px, 110% 60%,
+    right 30px, center top;
 
   color: white;
   font-family: "Inconsolata", monospace;
@@ -227,7 +360,10 @@ input:hover {
       center top;
   }
 
-  .frosted-input {
-    padding: 15px 100px;
+  .form > :not(label) {
+    width: 110%;
+  }
+  #upload-avatar-label {
+    width: 100%;
   }
 }

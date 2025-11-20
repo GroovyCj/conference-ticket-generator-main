@@ -20,13 +20,13 @@
   <div class="logo">
     <img src="./assets/images/logo-full.svg" alt="Coding conference logo"/>
   </div>
-  <header>
+  <header id="main-header">
   <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
 
   <p>Secure your spot at next year's biggest coding conference.<p>
   </header>
 
-  <div class="container">
+  <div  class="container">
   <!-- Form starts -->
    <form  id="form" class="form" action="/submit_form" method="post">
 
@@ -73,13 +73,28 @@
   <!-- Form ends -->
 
   <!-- Generated tickets starts -->
-<!-- 
-  Congrats, Full Name ! Your ticket is ready.
 
-  We've emailed your ticket to  Email Address and will send updates in the run up to the event.
+  <!--style="display: none;"-->
+ <div id="ticket-container" class="ticket-container">
+    <h1 class="congrats-banner">Congrats, <span id="ticket-banner-name">Friend</span>! Your ticket is ready.
+    </h1>
+ <p  class="congrats-banner-subtext">We've emailed your ticket to  <span id="ticket-email">example@examplemail.com</span> and will send updates in the run up to the event.</p> 
+    <div class="ticket-img-container">
+        <img id="ticket-logo"  src="./assets/images/logo-full.svg">
+  <img  id="conference-ticket" class="conference-ticket" src="assets\images\pattern-ticket.svg" alt="Ticket for the coding conference">
+  <img class="ticket-avatar" src="assets\images\image-avatar.jpg">
+  <p class="conference-ticket-date">Jan 31, 2025 / Austin, TX </p>
+  <p id="ticket-name" class="ticket-name">John Doe</p>
+  <p class="ticket-github-username"> <img class="ticket-github-favicon" src="assets/images/icon-github.svg">@KristofProzingus</p>
+  <span id="ticket-number">#01776</span>
+    </div>
 
-  Coding Conf
-  Jan 31, 2025 / Austin, TX -->
+    <button id="back-to-form" class="back-btn">Edit Info</button>
+
+
+
+</div>
+
 
   <!-- Generated tickets ends -->
   
