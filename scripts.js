@@ -204,7 +204,6 @@ document.getElementById("back-to-form").addEventListener("click", () => {
   const header = document.getElementById("main-header");
   const ticket = document.querySelector(".ticket-container");
 
-
   ticket.classList.remove("fade-in");
   ticket.classList.add("fade-out-reverse");
 
