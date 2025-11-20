@@ -16,7 +16,7 @@ This is a solution to the [Conference ticket generator challenge on Frontend Men
 
 
 ## Overview
-This is my first front end project.  It is a form, with validation, that generates a ticket when the user submits the form.  I added a little extra info to allow the user to back out and change things as they please.  I should also note, this was built using HTML, CSS, and Vanilla JavaScript. 
+This is my first front end project.  It is a form, with validation, that generates a ticket when the user submits the form.  I added a little extra button to allow the user to back out and change things as they please.  I should also note, this was built using HTML, CSS, and Vanilla JavaScript. 
 
 ### The challenge
 
@@ -52,7 +52,7 @@ Users should be able to:
 
 ### What I learned
 
-I learn that Front-end development is a touchy project that has some quirky interactions when building a cohesive layout.  I spent a lot of time looking at the screen yelling with a contorted look wondering why my layout looks wonky.  However, I was able to get it to work in the end, with the help of some good ole coffee. HTML, CSS and Javascript are married together unlike other languages, (converting a Java Class to a Python Class).  
+I learned that Front-end development is a touchy project that has some quirky interactions when building a cohesive layout.  I spent a lot of time looking at the screen yelling with a contorted smile wondering why my layout looks wonky.  However, I was able to get it to work in the end, with the help of some good ole coffee. HTML, CSS and Javascript are married together unlike other languages, (converting a Java Class to a Python Class).  
 
 ### Continued development
 
